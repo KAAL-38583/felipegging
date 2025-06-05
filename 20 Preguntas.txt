@@ -1,0 +1,75 @@
+20 preguntas resueltas
+
+1. ¿Qué devuelve el operador and cuando se usa entre dos valores booleanos?
+Devuelve True solo si ambos valores son True. Si alguno es False, devuelve False.
+
+2. ¿Qué devuelve el operador or cuando se usa entre dos valores booleanos?
+Devuelve True si al menos uno de los valores es True. Solo devuelve False si ambos son False.
+
+3. ¿Cuál es la diferencia entre or y xor en lógica booleana?
+or devuelve True si al menos uno es True. xor (o exclusivo) devuelve True solo si uno de los valores es True, pero no ambos.
+
+4. ¿Qué valor devuelve True and False?
+False.
+
+5. ¿Qué valor devuelve False or True?
+True.
+
+6. ¿En Python, existe un operador lógico xor nativo? Si no, ¿cómo se representa?
+No existe un operador lógico xor específico, pero puede representarse con el operador ^ o con expresiones como (a and not b) or (not a and b).
+
+7. ¿Cuál es la diferencia entre == y is en Python?
+== compara valores. is compara identidades de objeto (si apuntan al mismo objeto en memoria).
+
+8. ¿Qué operador lógico usarías para comprobar si ambas condiciones son verdaderas?
+El operador and.
+
+9. ¿Qué operador lógico se usa para verificar si al menos una condición es verdadera?
+El operador or.
+
+10. ¿Cómo se utiliza el operador ^ en Python y qué significa cuando se usa entre dos valores booleanos?
+Se utiliza como xor (o exclusivo). Devuelve True si los valores son diferentes, y False si son iguales.
+
+Parte 2: Ejercicios Prácticos
+11. Escribe una expresión que devuelva True si x es mayor que 10 y menor que 20.
+x > 10 and x < 20
+
+12. Escribe una condición que devuelva True si a es igual a b o c es mayor que 100.
+a == b or c > 100
+
+13. ¿Qué devuelve esta expresión y por qué?
+True or False and False
+True. Se evalúa primero el and: False and False → False. Luego: True or False → True.
+
+14. ¿Qué resultado tiene la siguiente operación?
+(5 > 3) ^ (2 < 1)
+True ^ False → True (porque son diferentes).
+
+15. Reescribe la siguiente expresión usando operadores relacionales y lógicos:
+not (a < b or b < c)
+(a >= b) and (b >= c)
+
+16. Dado x = 10, y = 20, escribe una condición que devuelva True solo si x y y son diferentes y al menos uno de los dos es mayor que 15.
+x != y and (x > 15 or y > 15)
+
+17. Evalúa el resultado de:
+(10 != 5) and (4 == 4) or (2 > 3)
+True and True or False → True or False → True
+
+18. Dado el siguiente código, ¿cuál es el valor de resultado?
+a = True
+b = False
+resultado = a ^ b
+resultado = True (porque son diferentes)
+
+19. ¿Qué devuelve esta expresión en Python y por qué?
+(3 > 2) and (2 > 1) ^ False
+True and (True ^ False) → True and True → True
+
+20. Escribe un programa que reciba dos números y diga si exactamente uno de ellos es positivo (usa xor para resolverlo).
+a = int(input("Ingrese el primer número: "))
+b = int(input("Ingrese el segundo número: "))
+if (a > 0) ^ (b > 0):
+    print("Exactamente uno de los dos es positivo.")
+else:
+    print("Ninguno o ambos son positivos.")
